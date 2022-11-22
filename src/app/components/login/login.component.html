@@ -1,1 +1,21 @@
-<p>login works!</p>
+<h1>login here</h1>
+
+<!-- login form -->
+<div class="loginBox" [formGroup]="user">
+    <div class="form-group">
+        <label class="form-label" for="username">username</label>
+        <input formControlName="username" class="form-control" type="text" placeholder="username" />
+        <div class="error" *ngIf="!user.get('username')?.valid">this field is required</div>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="password">password</label>
+        <input formControlName="password" class="form-control" type="password" />
+        <div class="error" *ngIf="!user.get('password')?.valid">this field is required</div>
+    </div>
+    <input type="submit" class="submitButton" [disabled]="!user.valid"
+    [ngClass]="{'disabled_button': !user.valid}" (click)="login_user()"> 
+</div>
+<div class="footer">
+    <label class="form-label">don't have an account?</label>
+    <button (click)="toRegister()" class="btn btn-primary btn-sm">sign up here</button>
+</div>

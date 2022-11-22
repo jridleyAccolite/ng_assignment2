@@ -1,0 +1,49 @@
+* {
+  color: #282d3b
+}
+
+
+
+h1 {
+  margin-left: 42%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.loginBox {
+  width: 500px;
+  margin-left: 30%;
+  display: block;
+  background-color: rgba(214, 219, 219, 0.267);
+  border-radius: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 5px;
+  padding-bottom: 50px;
+}
+
+.form-group {
+  margin: 50px;
+}
+
+.submitButton{
+  float: right;
+}
+
+.disabled_button{
+  opacity: 0.3;
+}
+
+.error{
+  font-size: x-small;
+  margin-left: 10px;
+  color: #c44b4b
+}
+
+.footer {
+  margin-left: 38%;
+  width:300px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}

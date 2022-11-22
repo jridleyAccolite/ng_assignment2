@@ -1,0 +1,32 @@
+<h1>Products</h1>
+<button class="logout-btn btn-primary btn btn-sm" (click)="logout_user()">logout</button>
+    <br>
+<div class="main">
+    <!-- product list section -->
+    <div class="productList">
+        <div *ngFor="let product of products"  class="productCard">
+            <div class="productCardRow">
+                <p>{{product.title}}</p>
+                <img src={{product.thumbnail}} class="img-fluid img-thumbnail" alt="...">
+            </div>
+            <div class="productCardRow">
+                <p>Price: £{{product.price}}</p>
+                <button class="btn-secondary btn-sm" (click)="addToCart(product)">add to cart</button>
+            </div>
+        </div>
+    </div>
+    <!-- cart section -->
+    <aside>
+        <h3>My Cart</h3>
+        <button *ngIf="cartItems.length" class="empty-btn btn-primary btn-sm" (click)="emptyCart()">empty cart</button>
+        <br>
+        <br>
+        <div class="cart" *ngFor="let item of cartItems">
+            <div class="cartItem">
+                <p>{{item.title}}</p>
+                <p>£{{item.price}}</p>
+            </div>
+        </div>
+        <p>Total: £{{getCartTotal()}}</p>
+    </aside>
+</div>

@@ -1,0 +1,40 @@
+* {
+    color: #282d3b
+  }
+  
+.error{
+    font-size: x-small;
+    margin-left: 10px;
+    color: #c44b4b
+  }
+
+  .registrationBox {
+    width: 500px;
+    margin-left: 30%;
+    display: block;
+    background-color: rgba(214, 219, 219, 0.267);
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+    padding-bottom: 50px;
+  }
+
+  h1 {
+    margin-left: 40%;
+    margin-top:50px;
+    margin-bottom:50px;
+    
+  }
+
+  .form-group {
+    margin: 20px;
+  }
+  
+  .submitButton{
+    float: right;
+  }
+  
+  .disabled_button{
+    opacity: 0.3;
+  }

@@ -1,0 +1,22 @@
+<h1>register here</h1>
+
+<!-- registration form -->
+<div class="registrationBox" [formGroup]="user">
+    <div class="form-group">
+        <label class="form-label" for="username">username</label>
+        <input formControlName="username" class="form-control" type="text" placeholder="username" />
+        <div class="error" *ngIf="!user.get('username')?.valid">username must be at least 5 characters long</div>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="email">email</label>
+        <input formControlName="email" class="form-control" type="email" placeholder="example@mail.com" />
+        <div class="error" *ngIf="!user.get('email')?.valid">valid email address required</div>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="password">password</label>
+        <input formControlName="password" class="form-control" type="password" />
+        <div class="error" *ngIf="!user.get('password')?.valid">password must be at least 5 characters long</div>
+    </div>
+    <input type="submit" class="submitButton" [disabled]="!user.valid"
+    [ngClass]="{'disabled_button': !user.valid}" (click)="toLogin()"> 
+</div>
