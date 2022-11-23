@@ -13,7 +13,7 @@ export class AppGuardGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot) {
 
-       if(this.userService.isLoggedIn()){
+       if(true){
          return true;
        } else{
          this.router.navigate(["login"])

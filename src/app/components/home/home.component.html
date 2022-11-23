@@ -23,8 +23,13 @@
         <br>
         <div class="cart" *ngFor="let item of cartItems">
             <div class="cartItem">
-                <p>{{item.title}}</p>
-                <p>£{{item.price}}</p>
+                <div>
+                    <p>{{item.title}}</p>
+                    <p>£{{item.price}}</p>
+                </div>
+                <div>
+                    <button class="btn-secondary remove-button" (click)="removeItem(item)">remove</button>
+                </div>
             </div>
         </div>
         <p>Total: £{{getCartTotal()}}</p>

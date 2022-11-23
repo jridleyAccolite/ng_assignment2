@@ -53,6 +53,12 @@ export class HomeComponent implements OnInit {
       this.cartItems = [];
     }
 
+    removeItem(item:product){
+      let index : number = this.cartItems.indexOf(item, 0);
+      this.cartItems.splice(index, 1);
+
+    }
+
     getCartTotal(){
       if(this.cartItems.length){
         return this.cartItems.map((item)=>item.price).reduce((a,b)=>a+b);

@@ -57,9 +57,17 @@ h3{
 }
 
 .cartItem{
+    background-color: #eef1ca;
     display:flex;
-    margin-top:5px;
+    margin-top:22px;
     margin-left: 5px;
     margin-bottom: 15px;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.remove-button{
+    height:33px;
 }
